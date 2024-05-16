@@ -22,3 +22,4 @@ The chatbot operates as follows:
 3. **Output Generation**: Compiles the response based on the retrieved data or interaction and presents it back to the user.
 
 The included flow diagram illustrates the process branches and operational logic.
+### FlowChart link: https://miro.com/app/board/uXjVKHZN8gI=/?share_link_id=883684255120
