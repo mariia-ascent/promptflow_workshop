@@ -1,0 +1,1 @@
+SELECT * FROM [dbo].[iherb_products_short]

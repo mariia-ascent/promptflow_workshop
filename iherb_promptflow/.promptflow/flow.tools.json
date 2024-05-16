@@ -1,0 +1,422 @@
+{
+  "package": {},
+  "code": {
+    "classification_result.py": {
+      "name": "classification_result.py",
+      "type": "python",
+      "inputs": {
+        "classification": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "value": "${classify_input.output}"
+        }
+      },
+      "source": "classification_result.py",
+      "function": "my_python_tool",
+      "is_builtin": false,
+      "enable_kwargs": false,
+      "tool_state": "stable",
+      "toolId": "classification_result.py"
+    },
+    "found_results.jinja2": {
+      "name": "found_results.jinja2",
+      "type": "prompt",
+      "inputs": {
+        "available_products": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "value": "${sql_query_execution.output}",
+          "id": "uqbtdq8y"
+        },
+        "user_request": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "value": "${request_rephrasing.output}",
+          "id": "ypo93030"
+        }
+      },
+      "source": "found_results.jinja2",
+      "is_builtin": false,
+      "enable_kwargs": false,
+      "tool_state": "stable",
+      "toolId": "found_results.jinja2"
+    },
+    "augmented_wiki_chat.jinja2": {
+      "name": "augmented_wiki_chat.jinja2",
+      "type": "prompt",
+      "inputs": {
+        "chat_history": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default"
+        },
+        "contexts": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default"
+        },
+        "question": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default"
+        }
+      },
+      "source": "augmented_wiki_chat.jinja2",
+      "is_builtin": false,
+      "enable_kwargs": false,
+      "tool_state": "stable",
+      "toolId": "augmented_wiki_chat.jinja2"
+    },
+    "chat.jinja2": {
+      "name": "chat.jinja2",
+      "type": "prompt",
+      "inputs": {
+        "chat_history": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "value": "${inputs.chat_history}",
+          "id": "x54j3vfi"
+        },
+        "chat_input": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "value": "${inputs.question}"
+        }
+      },
+      "source": "chat.jinja2",
+      "is_builtin": false,
+      "enable_kwargs": false,
+      "tool_state": "stable",
+      "toolId": "chat.jinja2"
+    },
+    "wikipedia_search_prompt.jinja2": {
+      "name": "wikipedia_search_prompt.jinja2",
+      "type": "prompt",
+      "inputs": {
+        "chat_history": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default"
+        },
+        "question": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "value": "${inputs.question}"
+        }
+      },
+      "source": "wikipedia_search_prompt.jinja2",
+      "is_builtin": false,
+      "enable_kwargs": false,
+      "tool_state": "stable",
+      "toolId": "wikipedia_search_prompt.jinja2"
+    },
+    "sql_query_execution.py": {
+      "name": "sql_query_execution.py",
+      "type": "python",
+      "inputs": {
+        "generated_sql": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "value": "${sql_guery_generation.output}",
+          "id": "f5mkhrg3"
+        }
+      },
+      "source": "sql_query_execution.py",
+      "function": "querying",
+      "is_builtin": false,
+      "enable_kwargs": false,
+      "tool_state": "stable",
+      "toolId": "sql_query_execution.py"
+    },
+    "process_search_results.py": {
+      "name": "process_search_results.py",
+      "type": "python",
+      "inputs": {
+        "search_result": {
+          "type": [
+            "object"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default"
+        }
+      },
+      "source": "process_search_results.py",
+      "function": "process_search_result",
+      "is_builtin": false,
+      "enable_kwargs": false,
+      "tool_state": "stable",
+      "toolId": "process_search_results.py"
+    },
+    "classify_input.jinja2": {
+      "name": "classify_input.jinja2",
+      "type": "prompt",
+      "inputs": {
+        "user_input": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "value": "${inputs.question}",
+          "id": "ik4jneab"
+        }
+      },
+      "source": "classify_input.jinja2",
+      "is_builtin": false,
+      "enable_kwargs": false,
+      "tool_state": "stable",
+      "toolId": "classify_input.jinja2"
+    },
+    "generate_output.py": {
+      "name": "generate_output.py",
+      "type": "python",
+      "inputs": {
+        "input1": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "value": "${no_results.output}",
+          "id": "s2cdpetd"
+        },
+        "input2": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "value": "${found_results.output}",
+          "id": "d64qziu0"
+        },
+        "input3": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "value": "${chitchat.output}"
+        },
+        "input4": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default"
+        }
+      },
+      "source": "generate_output.py",
+      "function": "my_python_tool",
+      "is_builtin": false,
+      "enable_kwargs": false,
+      "tool_state": "stable",
+      "toolId": "generate_output.py"
+    },
+    "get_wiki_url.py": {
+      "name": "get_wiki_url.py",
+      "type": "python",
+      "inputs": {
+        "count": {
+          "type": [
+            "int"
+          ],
+          "default": "2",
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default"
+        },
+        "entity": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default"
+        }
+      },
+      "source": "get_wiki_url.py",
+      "function": "get_wiki_url",
+      "is_builtin": false,
+      "enable_kwargs": false,
+      "tool_state": "stable",
+      "toolId": "get_wiki_url.py"
+    },
+    "sql_guery_generation.jinja2": {
+      "name": "sql_guery_generation.jinja2",
+      "type": "prompt",
+      "inputs": {
+        "existing_products": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "value": "${get_products_info.output}",
+          "id": "atnwn22w"
+        },
+        "regenerated_input": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "value": "${request_rephrasing.output}",
+          "id": "0k62ysa6"
+        }
+      },
+      "source": "sql_guery_generation.jinja2",
+      "is_builtin": false,
+      "enable_kwargs": false,
+      "tool_state": "stable",
+      "toolId": "sql_guery_generation.jinja2"
+    },
+    "chitchat.jinja2": {
+      "name": "chitchat.jinja2",
+      "type": "prompt",
+      "inputs": {
+        "user_input": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "value": "${inputs.question}"
+        }
+      },
+      "source": "chitchat.jinja2",
+      "is_builtin": false,
+      "enable_kwargs": false,
+      "tool_state": "stable",
+      "toolId": "chitchat.jinja2"
+    },
+    "found_results_num.py": {
+      "name": "found_results_num.py",
+      "type": "python",
+      "inputs": {
+        "found_products": {
+          "type": [
+            "object"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default",
+          "value": "${sql_query_execution.output}",
+          "id": "uizdt33w"
+        }
+      },
+      "source": "found_results_num.py",
+      "function": "my_python_tool",
+      "is_builtin": false,
+      "enable_kwargs": false,
+      "tool_state": "stable",
+      "toolId": "found_results_num.py"
+    },
+    "get_products_info.py": {
+      "name": "get_products_info.py",
+      "type": "python",
+      "source": "get_products_info.py",
+      "function": "my_python_tool",
+      "is_builtin": false,
+      "enable_kwargs": false,
+      "tool_state": "stable",
+      "toolId": "get_products_info.py"
+    },
+    "search_results.jinja2": {
+      "name": "search_results.jinja2",
+      "type": "prompt",
+      "inputs": {
+        "user_request": {
+          "type": [
+            "string"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default"
+        }
+      },
+      "source": "search_results.jinja2",
+      "is_builtin": false,
+      "enable_kwargs": false,
+      "tool_state": "stable",
+      "toolId": "search_results.jinja2"
+    },
+    "search_results_from_url.py": {
+      "name": "search_results_from_url.py",
+      "type": "python",
+      "inputs": {
+        "count": {
+          "type": [
+            "int"
+          ],
+          "default": "10",
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default"
+        },
+        "url_list": {
+          "type": [
+            "list"
+          ],
+          "allow_manual_entry": false,
+          "is_multi_select": false,
+          "input_type": "default"
+        }
+      },
+      "source": "search_results_from_url.py",
+      "function": "search_result_from_url",
+      "is_builtin": false,
+      "enable_kwargs": false,
+      "tool_state": "stable",
+      "toolId": "search_results_from_url.py"
+    }
+  }
+}

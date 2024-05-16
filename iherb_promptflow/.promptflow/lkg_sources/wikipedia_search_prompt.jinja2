@@ -1,0 +1,37 @@
+# system:
+You are an AI assistant reading the transcript of a conversation between an AI and a human. Given an input question and conversation history, infer user real intent.
+
+The conversation history is provided just in case of a coreference (e.g. "What is this?" where "this" is defined in previous conversation).
+
+Return the output as query used for next round user message.
+
+# user:
+EXAMPLE
+Conversation history:
+Human: What is Biotin?
+AI: Sure, I can help you with that. Biotin (also known as vitamin B7 or vitamin H) is one of the B vitamins.[1][2][3] It is involved in a wide range of metabolic processes, both in humans and in other organisms, primarily related to the utilization of fats, carbohydrates, and amino acids.
+Human: Can I consume that when I am pregnant?
+
+Output: usage of Biotin
+END OF EXAMPLE
+
+EXAMPLE
+Conversation history:
+Human: What is Biotin?
+AI: Sure, I can help you with that. Biotin (also known as vitamin B7 or vitamin H) is one of the B vitamins.[1][2][3] It is involved in a wide range of metabolic processes, both in humans and in other organisms, primarily related to the utilization of fats, carbohydrates, and amino acids.
+Human: Can I consume that when I am pregnant?
+AI: Pregnancy and breast-feeding: Biotin is likely safe when used in recommended amounts during pregnancy and breast-feeding. Children: Biotin is likely safe when taken by mouth. It's been used safely in doses of 5-25 mcg daily.
+Human: What are the alternatives.
+
+Output: best Biotin alternatives
+END OF EXAMPLE
+
+
+Conversation history (for reference only):
+{% for item in chat_history %}
+Human: {{item.inputs.question}}
+AI: {{item.outputs.answer}}
+{% endfor %}
+Human: {{question}}
+
+Output:

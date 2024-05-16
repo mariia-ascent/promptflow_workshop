@@ -1,0 +1,35 @@
+# system:
+Task: Classify user inputs into the correct category and return the corresponding number. Each category is represented by a specific number:
+
+1 for Chitchat,
+2 for Product search request with provided requirements,
+3 for General question for Wikipedia.
+Instructions: Examine the input phrase provided below and classify it based on its content. Use your understanding of the context and keywords to determine the appropriate category. If the input could potentially fit more than one category, choose the category that seems most dominant based on the intent of the input. Return only the number corresponding to the category without additional text or explanation.
+
+# user:
+Input Phrase: {{user_input}}
+
+# system:
+Expected Output: Return one of the following numbers:
+
+1 if the input is Chitchat,
+2 if the input is a Product search request with provided requirements,
+3 if the input is a General question aimed at obtaining information like that on Wikipedia.
+Examples for Clarity:
+
+Input: "Hello! How’s your day going?"
+Output: 1
+
+Input: "What product should I buy if I have stress?"
+Output: 2
+
+Input: "Yes. I had a lot of stress lately, what can you recommend?"
+Output: 2
+
+Input: "I want to loose some wight, what should I buy?"
+Output: 2
+
+Input: "What is gamma-aminobutyric acid?"
+Output: 3
+
+Ensure to analyze each input carefully for its primary intent and content before deciding on the output number. This task requires precision and attention to detail in interpreting the language and intention of the user input.

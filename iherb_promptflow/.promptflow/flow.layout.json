@@ -1,0 +1,121 @@
+{
+  "orientation": "Vertical",
+  "nodeLayouts": {
+    "inputs": {
+      "x": 745.5,
+      "y": 62,
+      "index": -1
+    },
+    "outputs": {
+      "x": 426.82692509591413,
+      "y": 1356.5434411781423,
+      "index": -1
+    },
+    "classify_input": {
+      "x": 745.5,
+      "y": 172,
+      "height": 75,
+      "index": 0
+    },
+    "classification_result": {
+      "x": 745.5,
+      "y": 282,
+      "height": 75,
+      "index": 1
+    },
+    "chitchat": {
+      "x": 12,
+      "y": 392,
+      "height": 75,
+      "index": 2
+    },
+    "wikipedia_search_prompt": {
+      "x": 873,
+      "y": 392,
+      "height": 75,
+      "index": 3
+    },
+    "get_wiki_url": {
+      "x": 817.5,
+      "y": 502,
+      "height": 75,
+      "index": 4
+    },
+    "search_results_from_url": {
+      "x": 878.5,
+      "y": 612,
+      "height": 75,
+      "index": 5
+    },
+    "augmented_wiki_chat": {
+      "x": 1109.5,
+      "y": 832,
+      "height": 75,
+      "index": 6
+    },
+    "process_search_results": {
+      "x": 988.5,
+      "y": 722,
+      "height": 75,
+      "index": 7
+    },
+    "request_rephrasing": {
+      "x": 295,
+      "y": 392,
+      "height": 75,
+      "index": 8
+    },
+    "get_products_info": {
+      "x": 525,
+      "y": 392,
+      "height": 75,
+      "index": 9
+    },
+    "sql_guery_generation": {
+      "x": 469.5,
+      "y": 502,
+      "height": 75,
+      "index": 10
+    },
+    "sql_query_execution": {
+      "x": 536.5,
+      "y": 612,
+      "height": 75,
+      "index": 11
+    },
+    "found_results_num": {
+      "x": 184,
+      "y": 722,
+      "height": 75,
+      "index": 12
+    },
+    "no_results": {
+      "x": 128.5,
+      "y": 832,
+      "height": 75,
+      "index": 13
+    },
+    "found_results": {
+      "x": 579.5,
+      "y": 832,
+      "height": 75,
+      "index": 14
+    },
+    "generate_output": {
+      "x": 340.83517766166074,
+      "y": 1203.6877107446912,
+      "height": 75,
+      "index": 15
+    }
+  },
+  "viewport": {
+    "transformMatrix": [
+      0.5110777218688132,
+      0,
+      0,
+      0.5110777218688132,
+      -10.577377224607776,
+      -254.42148736719898
+    ]
+  }
+}
